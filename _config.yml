@@ -1,14 +1,23 @@
-# Site settings
 title: OpenDCS
-email: geoff.jay@coanda.ca
-description: > # this means to ignore newlines until "baseurl:"
+url: "https://open-dcs.github.org" # the base hostname & protocol for your site
+email: geoff.jay@gmail.com
+author: Geoff Johnson <geoff.jay@gmail.com>
+
+description: >
   OpenDCS is a set of libraries and applications to create distributed control
   systems. Core features will include data acquisition, data logging, feedback
   control, and a configurable HMI utility.
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'Makefile']
+
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://open-dcs.github.org" # the base hostname & protocol for your site
 twitter_username: geoffjay
 github_username:  geoffjay
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
