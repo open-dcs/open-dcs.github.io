@@ -1,0 +1,14 @@
+# Site settings
+title: OpenDCS
+email: geoff.jay@coanda.ca
+description: > # this means to ignore newlines until "baseurl:"
+  OpenDCS is a set of libraries and applications to create distributed control
+  systems. Core features will include data acquisition, data logging, feedback
+  control, and a configurable HMI utility.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://open-dcs.github.org" # the base hostname & protocol for your site
+twitter_username: geoffjay
+github_username:  geoffjay
+
+# Build settings
+markdown: kramdown
