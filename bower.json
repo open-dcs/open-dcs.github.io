@@ -1,0 +1,21 @@
+{
+  "name": "open-dcs.github.io",
+  "homepage": "https://github.com/open-dcs/open-dcs.github.io",
+  "authors": [
+    "Geoff Johnson <geoff.jay@gmail.com>"
+  ],
+  "description": "A set of components for creating distributed control systems.",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-solarized-theme": "^1.0.3"
+  }
+}
