@@ -3,11 +3,10 @@
 
   {% include head.html %}
 
-  <body>
+  <!--<body class="solarized-dark">-->
+  <body class="solarized-light">
 
     {% include header.html %}
-
-    <img src="/assets/images/dcs.svg"/>
 
     <div class="page-content">
       <div class="wrapper">
@@ -16,6 +15,15 @@
     </div>
 
     {% include footer.html %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/assets/js/jquery.mobilemenu.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
+      });
+    </script>
 
   </body>
 

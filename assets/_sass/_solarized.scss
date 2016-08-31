@@ -1,0 +1,194 @@
+/**
+ * Include this file early in your Sass project to
+ * get access to Solarized colors and functions.
+ *
+ * Adapted from the outstanding work by Ethan Schoonover:
+ * http://ethanschoonover.com/solarized
+*/
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Colors
+$default:                  #FFFFFF;
+$highlightbackground:      $base2;
+$comment:                  $base01;
+$error:                    $base01;
+$generic:                  $base1;
+$keyword:                  $green;
+$literal:                  $base1;
+$name:                     $base1;
+$operator:                 $green;
+$other:                    $orange;
+$punctuation:              $base1;
+$commentmultiline:         $base01;
+$commentpreproc:           $green;
+$commentsingle:            $base01;
+$commentspecial:           $green;
+$genericdeleted:           $cyan;
+$genericemph:              $base1;
+$genericerror:             $red;
+$genericheading:           $orange;
+$genericinserted:          $green;
+$genericoutput:            $base1;
+$genericprompt:            $base1;
+$genericstrong:            $base1;
+$genericsubheading:        $orange;
+$generictraceback:         $base1;
+$keywordconstant:          $orange;
+$keyworddeclaration:       $blue;
+$keywordnamespace:         $green;
+$keywordpseudo:            $green;
+$keywordreserved:          $blue;
+$keywordtype:              $red;
+$literaldate:              $base1;
+$literalnumber:            $cyan;
+$literalstring:            $cyan;
+$nameattribute:            $base1;
+$namebuiltin:              $yellow;
+$nameclass:                $blue;
+$nameconstant:             $orange;
+$namedecorator:            $blue;
+$nameentity:               $orange;
+$nameexception:            $orange;
+$namefunction:             $blue;
+$namelabel:                $base1;
+$namenamespace:            $base1;
+$nameother:                #555555;
+$nameproperty:             $base1;
+$nametag:                  $blue;
+$namevariable:             $blue;
+$operatorword:             $green;
+$textwhitespace:           $base1;
+$literalnumberfloat:       $cyan;
+$literalnumberhex:         $cyan;
+$literalnumberinteger:     $cyan;
+$literalnumberoct:         $cyan;
+$literalstringbacktick:    $base01;
+$literalstringchar:        $cyan;
+$literalstringdoc:         $base1;
+$literalstringdouble:      $cyan;
+$literalstringescape:      $orange;
+$literalstringheredoc:     $base1;
+$literalstringinterpol:    $cyan;
+$literalstringother:       $cyan;
+$literalstringregex:       $red;
+$literalstringsingle:      $cyan;
+$literalstringsymbol:      $cyan;
+$namebuiltinpseudo:        $blue;
+$namevariableclass:        $blue;
+$namevariableglobal:       $blue;
+$namevariableinstance:     $blue;
+$literalnumberintegerlong: $cyan;
+
+$text-color:       $base1;
+$background-color: $base3;
+$brand-color:      $red;
+
+$grey-color:       $base01;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+@mixin rebase($rebase03, $rebase02, $rebase01, $rebase00, $rebase0, $rebase1, $rebase2, $rebase3) {
+  $text-color:       $rebase0;
+  $background-color: $rebase03;
+  //$brand-color:      $rebase02;
+  $grey-color:       $rebase01;
+  $grey-color-light: lighten($grey-color, 40%);
+  $grey-color-dark:  darken($grey-color, 25%);
+
+  $highlightbackground:      $rebase2;
+  $comment:                  $rebase01;
+  $error:                    $rebase01;
+  $generic:                  $rebase1;
+  $literal:                  $rebase1;
+  $name:                     $rebase1;
+  $punctuation:              $rebase1;
+  $commentmultiline:         $rebase01;
+  $commentsingle:            $rebase01;
+  $genericemph:              $rebase1;
+  $genericoutput:            $rebase1;
+  $genericprompt:            $rebase1;
+  $genericstrong:            $rebase1;
+  $generictraceback:         $rebase1;
+  $literaldate:              $rebase1;
+  $nameattribute:            $rebase1;
+  $namelabel:                $rebase1;
+  $namenamespace:            $rebase1;
+  $nameproperty:             $rebase1;
+  $textwhitespace:           $rebase1;
+  $literalstringbacktick:    $rebase01;
+  $literalstringdoc:         $rebase1;
+  $literalstringheredoc:     $rebase1;
+
+  //background-color: $background-color;
+  //color: $text-color;
+
+  * {
+    color: $rebase0;
+  }
+
+  body {
+    background-color:$rebase03;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color: $rebase1;
+    border-color: $rebase0;
+  }
+
+  a, a:active, a:visited {
+    color: $rebase1;
+  }
+
+  .highlight {
+    pre,
+    code {
+      border: 1px solid $rebase1;
+      color: $rebase01;
+      background-color: $highlightbackground;
+    }
+
+    .highlighter-rouge & {
+      background: lighten($rebase01, 25%);
+    }
+  }
+}
+
+@mixin accentize($accent) {
+  a, a:active, a:visited, code.url {
+    color: $accent;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color: $accent
+  }
+}
+
+/* light is default mode, so pair with general html definition */
+html, .solarized-light {
+  @include rebase($base3, $base2, $base1, $base0, $base00, $base01, $base02, $base03)
+}
+
+.solarized-dark {
+  @include rebase($base03, $base02, $base01, $base00, $base0, $base1, $base2, $base3)
+}
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto;
+}

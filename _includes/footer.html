@@ -1,18 +1,21 @@
-<footer class="site-footer">
+<footer class="footer">
 
-  <div class="wrapper">
+  <div class="container">
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+    <div class="row">
+      <div class="col-md-8">
+        <p class="copyright text-muted">
+          <small>
+            Copyright &copy; {{ site.time | date: '%Y' }}, {{ site.author }}.<br/>
+            Powered by <a href="http://jekyllrb.com">Jekyll</a> and
+            colored with <a href="http://ethanschoonover.com/solarized">Solarized</a>.
+          </small>
+        </p>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="col-md-2 pull-right">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -26,10 +29,6 @@
           </li>
           {% endif %}
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
       </div>
     </div>
 

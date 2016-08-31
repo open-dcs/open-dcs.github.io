@@ -1,0 +1,30 @@
+<article class="post">
+  <header>
+    <p class="post-title">
+      {% if include.post.external-url %}
+        <a href="{{ include.post.external-url }}">{{ include.post.title }}</a>
+        <a class="anchor" href="{{ include.post.url }}"><i class="glyphicon glyphicon-leaf"></i></a>
+      {% else %}
+        <a href="{{ include.post.url }}">{{ include.post.title }}</a>
+      {% endif %}
+      {% if include.post.categories.size > 0 %}
+        <small>in <a href="/{{ include.post.categories | join '/' }}">{{ include.post.categories | last | capitalize }}</a></small>
+      {% endif %}
+    </p>
+  </header>
+  <!--
+     -<div class="post-content">
+     -  {{ include.content }}
+     -</div>
+     -->
+  <footer class="post-footer">
+    <p>
+      <small>
+        Posted on <time datetime="{{ include.post.date | date: "%FT%R" }}">{{ include.post.date | date: "%b %d, %Y"}}</time>
+        {% if include.post.tags.size > 0 %}
+          and tagged with {{ include.post.tags | array_to_sentence_string }}
+        {% endif %}
+      </small>
+    </p>
+  </footer>
+</article>

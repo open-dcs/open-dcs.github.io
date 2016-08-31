@@ -1,5 +1,16 @@
-_site
-.sass-cache
+# Usual stuff
+*~
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
+# Jekyll
+_site/
+.sass-cache/
 .jekyll-metadata
 
-/bower_components
+# Bower
+bower_components/
+
+# Gem
+Gemfile
+Gemfile.lock

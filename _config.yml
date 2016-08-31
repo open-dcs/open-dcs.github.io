@@ -8,16 +8,21 @@ description: >
   systems. Core features will include data acquisition, data logging, feedback
   control, and a configurable HMI utility.
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'Makefile']
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Makefile']
 
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: geoffjay
-github_username:  geoffjay
+github_username:  open-dcs
 
 # Build settings
 markdown: kramdown
+sass:
+  sass_dir: assets/_sass
+
+paginate: 10
 
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-feed
   - jekyll-seo-tag

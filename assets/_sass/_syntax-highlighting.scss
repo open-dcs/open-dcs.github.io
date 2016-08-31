@@ -1,0 +1,104 @@
+/**
+ * Jekyll Pygments syntax highlighter styles
+ */
+
+.highlight {
+  font: 1em Monaco, Courier, Monospace;
+  line-height: 1.6em;
+  font-weight: bold;
+  @extend %vertical-rhythm;
+
+  pre,
+  code {
+    border: 1px solid $base1;
+    color: $base01;
+    background-color: $highlightbackground;
+  }
+
+  pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+      border: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .highlighter-rouge & {
+    background: lighten($base1, 25%);
+  }
+
+  // Comment(s)
+  .c     { color: $comment; font-style: italic }
+  .cm    { color: $commentmultiline; font-style: italic }
+  .cp    { color: $commentpreproc; font-weight: bold }
+  .c1    { color: $commentsingle; font-style: italic }
+  .cs    { color: $commentspecial; font-weight: bold; font-style: italic }
+  // Error
+  .err   { color: $error; background-color: $base3 }
+  // Keyword
+  .k     { color: $keyword; font-weight: bold }
+  .kc    { color: $keywordconstant; font-weight: bold }
+  .kd    { color: $keyworddeclaration; font-weight: bold }
+  .kp    { color: $keywordpseudo; font-weight: bold }
+  .kr    { color: $keywordreserved; font-weight: bold }
+  .kt    { color: $keywordtype; font-weight: bold }
+  // Operator
+  .o     { color: $operator; font-weight: bold }
+  .ow    { color: $operatorword; font-weight: bold }
+  // Generic(s)
+  .gd    { color: $genericdeleted; background-color: $base2 }
+  .gd .x { color: $other; background-color: $base2 }
+  .ge    { color: $genericemph; font-style: italic }
+  .gr    { color: $genericerror }
+  .gh    { color: $genericheading }
+  .gi    { color: $genericinserted; background-color: $base2 }
+  .gi .x { color: $other; background-color: $base2 }
+  .go    { color: $genericoutput }
+  .gp    { color: $genericprompt }
+  .gs    { color: $genericstrong; font-weight: bold }
+  .gu    { color: $genericsubheading }
+  .gt    { color: $generictraceback }
+  // Literal(s)
+  .l     { color: $literal }
+  .m     { color: $literalnumber }
+  .s     { color: $literalstring; }
+  .mf    { color: $literalnumberfloat }
+  .mh    { color: $literalnumberhex }
+  .mi    { color: $literalnumberinteger }
+  .mo    { color: $literalnumberoct }
+  .il    { color: $literalnumberintegerlong }
+  .sb    { color: $literalstringbacktick }
+  .sc    { color: $literalstringchar }
+  .sd    { color: $literalstringdoc }
+  .s2    { color: $literalstringdouble }
+  .se    { color: $literalstringescape }
+  .sh    { color: $literalstringheredoc }
+  .si    { color: $literalstringinterpol }
+  .sx    { color: $literalstringother }
+  .sr    { color: $literalstringregex }
+  .s1    { color: $literalstringsingle }
+  .ss    { color: $literalstringsymbol }
+  // Name(s)
+  .na    { color: $nameattribute }
+  .nb    { color: $namebuiltin }
+  .nc    { color: $nameclass; font-weight: bold }
+  .no    { color: $nameconstant }
+  .ni    { color: $nameentity }
+  .ne    { color: $nameexception; font-weight: bold }
+  .nf    { color: $namefunction; font-weight: bold }
+  .nn    { color: $namenamespace }
+  .nt    { color: $nametag }
+  .nv    { color: $namevariable }
+  .bp    { color: $namebuiltinpseudo }
+  .vc    { color: $namevariableclass }
+  .vg    { color: $namevariableglobal }
+  .vi    { color: $namevariableinstance }
+  // Text
+  .w     { color: $textwhitespace }
+}

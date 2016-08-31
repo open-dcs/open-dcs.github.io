@@ -1,0 +1,14 @@
+## Backends
+
+A logging backend plugin:
+
+* connects to or creates databases and files, eg. XML, hdf5, MariaDB
+* is configurable using a consistent DCS configuration format
+* describes the features it provides using mask-able flags
+* writes all data as a key/value pair where the key is a unique hash value
+* reads data back as an array of objects containing logged data
+* defines a filter for messages that it expects the daemon to receive and queue for it
+* receives all messages seen on the message queue it is connected to
+* sends messages for status, performance statistics, errors, etc. using the plugin's unique identifier as the key to the message object
+
+### Features
