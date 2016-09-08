@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  Software Requirements Specification for libdcs-core
+title:  Software Requirements Specification for libdcs-log
 author: Geoff Johnson <geoff.jay@gmail.com>
 date:   2016-09-07 19:15:14 -0700
-description: An SRS for the core library of OpenDCS components.
+description: An SRS for the data logging library of OpenDCS components.
 categories: requirements
-permalink: /doc/requirements/libdcs-core-srs
+permalink: /doc/requirements/libdcs-log-srs
 ---
 
-The requirements specification for the core set of OpenDCS classes is described
-in this section.<br/>
+The requirements specification for the set of OpenDCS classes that are used in
+writing and reading logged process data is described in this section.<br/>
 <!--break-->
 
 ## Functionality

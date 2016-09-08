@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  Software Requirements Specification for libdcs-core
+title:  Software Requirements Specification for libdcs-net
 author: Geoff Johnson <geoff.jay@gmail.com>
-date:   2016-09-07 19:15:14 -0700
-description: An SRS for the core library of OpenDCS components.
+date:   2016-09-07 19:39:10 -0700
+description: An SRS for the networking library of OpenDCS components.
 categories: requirements
-permalink: /doc/requirements/libdcs-core-srs
+permalink: /doc/requirements/libdcs-net-srs
 ---
 
-The requirements specification for the core set of OpenDCS classes is described
-in this section.<br/>
+The requirements specification for the set of OpenDCS classes for communicating
+of various network interfaces is described in this section.<br/>
 <!--break-->
 
 ## Functionality

@@ -16,6 +16,20 @@ see [here][history].
 
 ## Requirements
 
+### System Requirements Specification
+
+This is a single document that describes the system as a whole, it can be read
+[here][opendcs-srs].
+
+### Software Requirements Specification
+
+All of the SRS documents are provided at the pages referenced in this list:
+
+* [Core Library][libdcs-core-srs]
+* [Data Acquisition Library][libdcs-daq-srs]
+* [Networking Library][libdcs-net-srs]
+* [Data Logging Library][libdcs-log-srs]
+
 ## Design
 
 ## Testing
@@ -23,4 +37,9 @@ see [here][history].
 ## Presentation
 
 [dactl]: https://github.com/coanda/dactl
-[history]: /doc/updates/2016/08/31/history.html
+[history]: /doc/dactl/2016/08/31/history.html
+[opendcs-srs]: /doc/requirements/opendcs-srs.html
+[libdcs-core-srs]: /doc/requirements/libdcs-core-srs.html
+[libdcs-daq-srs]: /doc/requirements/libdcs-daq-srs.html
+[libdcs-net-srs]: /doc/requirements/libdcs-net-srs.html
+[libdcs-log-srs]: /doc/requirements/libdcs-log-srs.html

@@ -5,6 +5,7 @@ author: Geoff Johnson <geoff.jay@gmail.com>
 date:   2016-09-07 19:20:10 -0700
 description: An SRS for the OpenDCS as an entire system.
 categories: requirements
+permalink: /doc/requirements/opendcs-srs
 ---
 
 <!--
@@ -23,26 +24,37 @@ Provide Installation Drawings/Instructions.
 Provide Interface Control Drawings (ICD's, External I/O)
 -->
 
-# Functionality
+The system requirements for OpenDCS are described in this section, it contains
+information about the functionality of the system as a whole. OpenDCS is a
+platform that has the potential to integrate with electrical and mechanical
+systems so it is necessary to comment on the software interactions with such
+systems, but due to the nature of the design it would be impossible to enforce
+strict rules governing external systems that are mechanical, electrical and
+software.<br/>
+<!--break-->
 
-# Hardware / Software Functional Partitioning
+## Functionality
 
-# Performance
+## Hardware / Software Functional Partitioning
 
-# Hardware / Software Performance Partitioning
+## Performance
 
-# Safetry Requirements
+## Hardware / Software Performance Partitioning
 
-# User Interface
+## Safetry Requirements
 
-# Installation Instructions
+## User Interface
 
-# Interface Control Drawings
+## Installation Instructions
+
+## Interface Control Drawings
 
 <hr/>
 
 References:
 
 1. [Requirements Specification for Process-Control Systems][ieee-req]
+2. [How to Write a Software Requirements Specification][microtools]
 
 [ieee-req]: http://sunnyday.mit.edu/papers/tcas-tse.pdf
+[microtools]: http://www.microtoolsinc.com/Howsrs.php
