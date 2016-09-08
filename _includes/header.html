@@ -9,7 +9,7 @@
         <!--<a class="site-title" href="{{ site.baseurl }}/"><img src="/assets/img/dcs-dark.svg"/></a>-->
       </div>
 
-      <div class="col-md-6 col-md-offset-2 pull-right">
+      <div class="col-md-5 col-md-offset-3 pull-right">
         <nav class="site-nav">
           <a href="#" class="menu-icon">
             <svg viewBox="0 0 18 15">
@@ -21,7 +21,7 @@
 
           <div class="trigger">
             {% for my_page in site.pages %}
-              {% if my_page.title %}
+              {% if my_page.title and my_page.title != 'Archives' %}
               <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
               {% endif %}
             {% endfor %}
