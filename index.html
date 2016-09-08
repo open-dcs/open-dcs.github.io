@@ -24,6 +24,8 @@ layout: default
 
     <article class="post-preview">
 
+      {% if post.categories[0] != 'doc' %}
+
       {% if post.external-url %}
         <h1 class="yellow">
           <a href="{{ post.external-url }}">{{ post.title }}</a>
@@ -36,6 +38,8 @@ layout: default
       {{ post.content | split:'<!--break-->' | first }}
       {% if post.content contains '<!--break-->' %}
         <a href="{{ post.url }}">read more&hellip;</a>
+      {% endif %}
+
       {% endif %}
 
     </article>

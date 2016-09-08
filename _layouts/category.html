@@ -4,17 +4,28 @@ layout: default
 
 <div class="category">
 
-  <h2>{{ page.title }} <small>category</small></h2>
+  <h1>{{ page.title }} <small>category</small></h1>
 
-  <div class="category-content">{{ content }}</div>
-
-  <h2>Posts</h2>
-
-  <div class="category-posts">
-    {% for category in page.categories %}
-      {% for post in site.categories[category] %}
-        {% include post.html post=post content=post.content %}
-      {% endfor %}
-    {% endfor %}
+  <div class="category-content">
+    {{ content }}
   </div>
+
+  <h1>Posts</h1>
+
+  {% for category in page.categories %}
+    {% for post in site.categories[category] %}
+
+      <article class="post-preview">
+
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h1 class="yellow"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        {{ post.content | split:'<!--break-->' | first }}
+        {% if post.content contains '<!--break-->' %}
+          <a href="{{ post.url }}">read more&hellip;</a>
+        {% endif %}
+
+      </article>
+
+    {% endfor %}
+  {% endfor %}
 </div>
