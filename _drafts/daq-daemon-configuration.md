@@ -15,7 +15,7 @@ the DAQ daemon in the future.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<dcs xmlns:daq="urn:libdcs-daq" xmlns:net="urn:libdcs-net"
+<dcs xmlns:daq="urn:libdcs-daq" xmlns:net="urn:libdcs-net">
   <property name="log">/var/log/dcs/daq.log</property>
 
   <daq:objects>

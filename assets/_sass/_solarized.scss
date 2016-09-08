@@ -6,24 +6,25 @@
  * http://ethanschoonover.com/solarized
 */
 
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
+// Solarized colors
+$base03:                   #002b36;
+$base02:                   #073642;
+$base01:                   #586e75;
+$base00:                   #657b83;
+$base0:                    #839496;
+$base1:                    #93a1a1;
+$base2:                    #eee8d5;
+$base3:                    #fdf6e3;
+$yellow:                   #b58900;
+$orange:                   #cb4b16;
+$red:                      #dc322f;
+$magenta:                  #d33682;
+$violet:                   #6c71c4;
+$blue:                     #268bd2;
+$cyan:                     #2aa198;
+$green:                    #859900;
 
-// Colors
+// Syntax highlighting colors
 $default:                  #FFFFFF;
 $highlightbackground:      $base2;
 $comment:                  $base01;
@@ -95,77 +96,150 @@ $namevariableglobal:       $blue;
 $namevariableinstance:     $blue;
 $literalnumberintegerlong: $cyan;
 
-$text-color:       $base1;
-$background-color: $base3;
-$brand-color:      $red;
-
-$grey-color:       $base01;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+// Layout colors
+$text-color:               $base0;
+$background-color:         $base03;
+$brand-color:              $red;
+$grey-color:               $base01;
+$grey-color-light:         lighten($grey-color, 40%);
+$grey-color-dark:          darken($grey-color, 25%);
 
 @mixin rebase($rebase03, $rebase02, $rebase01, $rebase00, $rebase0, $rebase1, $rebase2, $rebase3) {
-  $text-color:       $rebase0;
-  $background-color: $rebase03;
-  //$brand-color:      $rebase02;
-  $grey-color:       $rebase01;
-  $grey-color-light: lighten($grey-color, 40%);
-  $grey-color-dark:  darken($grey-color, 25%);
 
-  $highlightbackground:      $rebase2;
-  $comment:                  $rebase01;
-  $error:                    $rebase01;
-  $generic:                  $rebase1;
-  $literal:                  $rebase1;
-  $name:                     $rebase1;
-  $punctuation:              $rebase1;
-  $commentmultiline:         $rebase01;
-  $commentsingle:            $rebase01;
-  $genericemph:              $rebase1;
-  $genericoutput:            $rebase1;
-  $genericprompt:            $rebase1;
-  $genericstrong:            $rebase1;
-  $generictraceback:         $rebase1;
-  $literaldate:              $rebase1;
-  $nameattribute:            $rebase1;
-  $namelabel:                $rebase1;
-  $namenamespace:            $rebase1;
-  $nameproperty:             $rebase1;
-  $textwhitespace:           $rebase1;
-  $literalstringbacktick:    $rebase01;
-  $literalstringdoc:         $rebase1;
-  $literalstringheredoc:     $rebase1;
+  // Syntax highlighting colors
+  $highlightbackground:    $rebase02;
+  $comment:                $rebase1;
+  $error:                  $rebase1;
+  $generic:                $rebase01;
+  $literal:                $rebase01;
+  $name:                   $rebase01;
+  $punctuation:            $rebase01;
+  $commentmultiline:       $rebase1;
+  $commentsingle:          $rebase1;
+  $genericemph:            $rebase01;
+  $genericoutput:          $rebase01;
+  $genericprompt:          $rebase01;
+  $genericstrong:          $rebase01;
+  $generictraceback:       $rebase01;
+  $literaldate:            $rebase01;
+  $nameattribute:          $rebase01;
+  $namelabel:              $rebase01;
+  $namenamespace:          $rebase01;
+  $nameproperty:           $rebase01;
+  $textwhitespace:         $rebase01;
+  $literalstringbacktick:  $rebase1;
+  $literalstringdoc:       $rebase01;
+  $literalstringheredoc:   $rebase01;
 
-  //background-color: $background-color;
-  //color: $text-color;
+  // Layout colors
+  $text-color:             $rebase0;
+  $background-color:       $rebase03;
+  $brand-color:            $rebase2;
+  $grey-color:             $rebase1;
+  $grey-color-light:       lighten($grey-color, 40%);
+  $grey-color-dark:        darken($grey-color, 25%);
 
-  * {
-    color: $rebase0;
-  }
-
-  body {
-    background-color:$rebase03;
-  }
+  background-color: $background-color;
+  color: $text-color;
 
   h1,h2,h3,h4,h5,h6 {
     color: $rebase1;
     border-color: $rebase0;
   }
 
-  a, a:active, a:visited {
-    color: $rebase1;
+/*
+ *  // light
+ *  a, a:visited, a:active {
+ *    color: #2aa198;
+ *    border-color: #eee8d5;
+ *  }
+ *
+ *  a:hover {
+ *    background-color: #eee8d5;
+ *    border-color: #eee8d5;
+ *    color: #2aa198;
+ *  }
+ *
+ *  // dark
+ *  a, a:visited, a:active {
+ *    color: #2aa198;
+ *    border-color: #073642;
+ *  }
+ *
+ *  a:hover {
+ *    background-color: #073642;
+ *    border-color: #073642;
+ *    color: #2aa198;
+ *  }
+ *
+ *  a, a:active, a:visited {
+ *    color: $rebase1;
+ *  }
+ */
+
+  a {
+    color: $yellow;
+    border: none;
+
+    &:visited, &:active {
+      color: $yellow;
+    }
+
+    &:hover {
+      background-color: $rebase02;
+      border-color: $rebase2;
+    }
   }
 
   .highlight {
     pre,
     code {
-      border: 1px solid $rebase1;
-      color: $rebase01;
+      border: 1px solid $rebase01;
+      color: $rebase1;
       background-color: $highlightbackground;
     }
 
-    .highlighter-rouge & {
-      background: lighten($rebase01, 25%);
+    pre {
+      > code {
+        border: 0;
+      }
     }
+
+    .highlighter-rouge & {
+      background: lighten($rebase1, 25%);
+    }
+  }
+
+  html.yellow, .yellow {
+    @include accentize($yellow);
+  }
+
+  html.orange, .orange {
+    @include accentize($orange);
+  }
+
+  html.red, .red {
+    @include accentize($red);
+  }
+
+  html.magenta, .magenta {
+    @include accentize($magenta);
+  }
+
+  html.violet, .violet {
+    @include accentize($violet);
+  }
+
+  html.blue, .blue {
+    @include accentize($blue);
+  }
+
+  html.cyan, .cyan {
+    @include accentize($cyan);
+  }
+
+  html.green, .green {
+    @include accentize($green);
   }
 }
 
