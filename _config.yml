@@ -2,6 +2,7 @@ title: OpenDCS
 url: "https://open-dcs.github.org" # the base hostname & protocol for your site
 email: geoff.jay@gmail.com
 author: Geoff Johnson <geoff.jay@gmail.com>
+host: 0.0.0.0
 
 description: >
   OpenDCS is a set of libraries and applications to create distributed control

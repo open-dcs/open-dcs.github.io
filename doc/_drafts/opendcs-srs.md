@@ -41,7 +41,7 @@ software.<br/>
 
 ## Hardware / Software Performance Partitioning
 
-## Safetry Requirements
+## Safety Requirements
 
 ## User Interface
 
