@@ -8,20 +8,19 @@ visible: 1
 categories: doc testing
 ---
 
-# Unit Tests
-
 The unit test framework that is used in OpenDCS is based off of the work done by
 the developers of [libgee][libgee], specifically the TestCase class that extends
 what's available in [GTest][gtest] which is included in GLib.
+<!--break-->
 
 ## Building Tests
 
 To build the unit test applications as part of OpenDCS the argument to enable
 building must be added when generating the output of autotools.
 
-```bash
+{% highlight bash %}
 ./autogen.sh
-```
+{% endhighlight %}
 
 ## Executing Tests
 
@@ -32,24 +31,24 @@ for a GUI.
 Running all of the tests available for one of the categories is done using
 `gtester`, for example the core components:
 
-```bash
+{% highlight bash %}
 gtester --verbose tests/test-dcs-core
-```
+{% endhighlight %}
 
 Which results in:
 
-```bash
+{% highlight bash %}
 TEST: tests/test-dcs-core... (pid=24910)
   /DcsObject/[DcsObject] Test equivalency:                             OK
   /DcsObject/[DcsObject] Test comparison:                              OK
 PASS: tests/test-dcs-core
-```
+{% endhighlight %}
 
 Individual test cases can also be specified using a path argument such as:
 
-```bash
+{% highlight bash %}
 gtester --verbose -p /DcsObject tests/test-dcs-core
-```
+{% endhighlight %}
 
 Which at this time results in the same thing so it will be omitted until there's
 something more interesting to add.
