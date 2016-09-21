@@ -19,7 +19,7 @@ To build the unit test applications as part of OpenDCS the argument to enable
 building must be added when generating the output of autotools.
 
 {% highlight bash %}
-./autogen.sh
+./autogen.sh --enable-tests
 {% endhighlight %}
 
 ## Executing Tests
