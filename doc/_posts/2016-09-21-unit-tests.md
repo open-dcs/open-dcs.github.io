@@ -28,8 +28,26 @@ The tests have been broken into different sections in case there is the future
 need to provide conditional builds of some of the sections, eg. omitting support
 for a GUI.
 
-Running all of the tests available for one of the categories is done using
-`gtester`, for example the core components:
+Running all of the tests available for one of the categories of tests is done
+using the application for that section. Each uses `gtester` but can be invoked
+directly, for example to test the core components:
+
+{% highlight bash %}
+tests/test-dcs-core --verbose
+{% endhighlight %}
+
+Which results in:
+
+{% highlight bash %}
+GTest: random seed: R02S969cd3dff33efbc82f8a926b428a96a5
+(MSG: Execute core unit tests)
+GTest: run: /DcsObject/[DcsObject] Test equivalency
+GTest: result: OK
+GTest: run: /DcsObject/[DcsObject] Test comparison
+GTest: result: OK
+{% endhighlight %}
+
+Or using `gtester` directly:
 
 {% highlight bash %}
 $ gtester --verbose tests/test-dcs-core
@@ -45,8 +63,7 @@ Individual test cases can also be specified using a path argument such as:
 $ gtester --verbose -p /DcsObject tests/test-dcs-core
 {% endhighlight %}
 
-Which at this time results in the same thing so it will be omitted until there's
-something more interesting to add.
+Which at this time results in the same output as above.
 
 [gtest]: http://developer.gnome.org/glib/unstable/glib-Testing.html
 [libgee]: https://live.gnome.org/Libgee
