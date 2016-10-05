@@ -31,18 +31,13 @@ for a GUI.
 Running all of the tests available for one of the categories is done using
 `gtester`, for example the core components:
 
-{% highlight bash %}
-gtester --verbose tests/test-dcs-core
-{% endhighlight %}
-
-Which results in:
-
-{% highlight bash %}
+{% terminal %}
+$ gtester --verbose tests/test-dcs-core
 TEST: tests/test-dcs-core... (pid=24910)
   /DcsObject/[DcsObject] Test equivalency:                             OK
   /DcsObject/[DcsObject] Test comparison:                              OK
 PASS: tests/test-dcs-core
-{% endhighlight %}
+{% endterminal %}
 
 Individual test cases can also be specified using a path argument such as:
 

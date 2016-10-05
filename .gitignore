@@ -9,6 +9,7 @@ _site/
 .jekyll-metadata
 
 # Bower
+assets/components/
 bower_components/
 
 # Gem

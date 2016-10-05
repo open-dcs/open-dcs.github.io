@@ -13,7 +13,7 @@ the DAQ daemon in the future.
 
 ### XML Configuration Example
 
-{% highlight xml %}
+{% highlight xml linenos %}
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <dcs xmlns:daq="urn:libdcs-daq" xmlns:net="urn:libdcs-net">
   <property name="log">/var/log/dcs/daq.log</property>

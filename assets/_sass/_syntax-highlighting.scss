@@ -26,6 +26,26 @@
       border: 0;
       padding-right: 0;
       padding-left: 0;
+
+      pre.lineno {
+        border: none;
+        padding: 0px 8px 0px 0px;
+        margin-bottom: 0px;
+      }
+
+      td.code {
+
+        margin: 0px;
+        padding: 0px;
+
+        > pre {
+          border: none;
+          border-radius: 0px;
+          border-left: 1px dotted $base1;
+          padding: 0px 8px;
+          margin: 0px;
+        }
+      }
     }
   }
 

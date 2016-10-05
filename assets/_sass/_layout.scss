@@ -253,3 +253,19 @@
     }
   }
 }
+
+/**
+ * Terminal fixes
+ */
+.terminal {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 40px 8px rgba(64, 64, 64, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.3);
+
+  .title {
+    left: -20px;
+  }
+
+  > nav:first-of-type a.close {
+    margin-left: 10px;
+    opacity: 1;
+  }
+}
