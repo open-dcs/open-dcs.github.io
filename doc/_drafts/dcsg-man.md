@@ -52,8 +52,7 @@ Provide some information here...
 [dcs-reply(1)](dcs-reply.html) ,
 [dcs-daqd(1)](dcs-daqd.html) ,
 [dcs-logd(1)](dcs-logd.html) ,
-[dcs-controld(1)](dcs-controld.html) ,
-[dcsg(1)](dcsg.html)
+[dcs-controld(1)](dcs-controld.html)
 
 ## Notes
 
