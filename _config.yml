@@ -24,7 +24,6 @@ paginate: 10
 
 gems:
   - jekyll-sitemap
-  - jekyll-terminal
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag

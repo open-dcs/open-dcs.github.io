@@ -19,7 +19,7 @@ To build the unit test applications as part of OpenDCS the argument to enable
 building must be added when generating the output of autotools.
 
 {% highlight bash %}
-./autogen.sh --enable-tests
+$ ./autogen.sh --enable-tests
 {% endhighlight %}
 
 ## Executing Tests
@@ -31,18 +31,18 @@ for a GUI.
 Running all of the tests available for one of the categories is done using
 `gtester`, for example the core components:
 
-{% terminal %}
+{% highlight bash %}
 $ gtester --verbose tests/test-dcs-core
 TEST: tests/test-dcs-core... (pid=24910)
   /DcsObject/[DcsObject] Test equivalency:                             OK
   /DcsObject/[DcsObject] Test comparison:                              OK
 PASS: tests/test-dcs-core
-{% endterminal %}
+{% endhighlight %}
 
 Individual test cases can also be specified using a path argument such as:
 
 {% highlight bash %}
-gtester --verbose -p /DcsObject tests/test-dcs-core
+$ gtester --verbose -p /DcsObject tests/test-dcs-core
 {% endhighlight %}
 
 Which at this time results in the same thing so it will be omitted until there's
