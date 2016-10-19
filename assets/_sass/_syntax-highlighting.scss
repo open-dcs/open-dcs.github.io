@@ -50,7 +50,15 @@
   }
 
   .highlighter-rouge & {
-    background: lighten($base1, 25%);
+    background-color: $highlightbackground;
+    border: 1px solid $base01;
+    border-radius: 2px;
+    padding: 8px 12px;
+
+    pre,
+    code {
+      border: 0;
+    }
   }
 
   // Comment(s)
