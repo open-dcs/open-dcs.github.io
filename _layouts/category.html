@@ -14,18 +14,20 @@ layout: default
 
   {% for category in page.categories %}
     {% for post in site.categories[category] %}
+      {% if post.categories[1] != 'api' %}
 
-      <article class="post-preview">
+        <article class="post-preview">
 
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h1 class="yellow"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        {{ post.content | split:'<!--break-->' | first }}
-        {% if post.content contains '<!--break-->' %}
-          <a href="{{ post.url }}">read more&hellip;</a>
-        {% endif %}
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h1 class="yellow"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          {{ post.content | split:'<!--break-->' | first }}
+          {% if post.content contains '<!--break-->' %}
+            <a href="{{ post.url }}">read more&hellip;</a>
+          {% endif %}
 
-      </article>
+        </article>
 
+      {% endif %}
     {% endfor %}
   {% endfor %}
 </div>

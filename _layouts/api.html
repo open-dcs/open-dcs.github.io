@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="breadcrumbs">
+      {% for category in page.categories %}
+        {% if category == 'api' %}
+        <a href="/doc/api/v0">OpenDCS v0</a> /
+        {% elsif category == 'addins' %}
+        <a href="/doc/api/v0/addins">Addins</a>
+        {% elsif category == 'backends' %}
+        <a href="/doc/api/v0/backends">Logging Backends</a>
+        {% elsif category == 'devices' %}
+        <a href="/doc/api/v0/devices">Devices</a>
+        {% elsif category == 'loops' %}
+        <a href="/doc/api/v0/loops">Control Loops</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if page.external-url %}
+    <h2 class="post-title" itemprop="name headline"><a href="{{ page.external-url }}">{{ page.title }}</a></h2>
+    <a class="anchor" href="{{ page.url }}"><i class="icon-anchor"></i></a>
+    {% else %}
+    <h2 class="post-title" itemprop="name headline">{{ page.title }}</h2>
+    {% endif %}
+
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <!--
+     -<p class="post-meta">
+     -  <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+     -    {{ page.date | date: "%b %-d, %Y" }}
+     -  </time>
+     -  {% if page.author %}
+     -    • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+     -      <span itemprop="name">
+     -        {{ page.author }}
+     -      </span>
+     -    </span>
+     -  {% endif %}
+     -</p>
+     -->
+
+</article>

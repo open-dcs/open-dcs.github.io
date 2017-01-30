@@ -11,6 +11,8 @@ description: >
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Makefile']
 
+include: ['doc/_api']
+
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: geoffjay
 github_username:  open-dcs
