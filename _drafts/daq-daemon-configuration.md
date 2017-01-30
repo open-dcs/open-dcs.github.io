@@ -11,6 +11,14 @@ Hollow concept for now, but maybe an actual place for a how-to of configuring
 the DAQ daemon in the future.
 <br/><!--break-->
 
+### UML
+
+#### Test
+
+{% plantuml %}
+[First] - [Second]
+{% endplantuml %}
+
 ### XML Configuration Example
 
 {% highlight xml linenos %}
