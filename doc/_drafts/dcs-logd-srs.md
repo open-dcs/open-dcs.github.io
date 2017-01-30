@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  Software Requirements Specification for libdcs-net
+title:  Software Requirements Specification for dcs-logd
 author: Geoff Johnson <geoff.jay@gmail.com>
-date:   2016-09-07 19:39:10 -0700
-description: An SRS for the networking library of OpenDCS components.
+date:   2016-09-07 19:15:14 -0700
+description: An SRS for the OpenDCS data logging daemon.
 categories: requirements
-permalink: /doc/requirements/libdcs-net-srs
+permalink: /doc/requirements/dcs-logd-srs
 ---
 
-The requirements specification for the set of OpenDCS classes for communicating
-of various network interfaces is described in this section.<br/>
+The requirements specification for the set of OpenDCS classes that are used in
+writing and reading logged process data is described in this section.<br/>
 <!--break-->
 
 ## Functionality

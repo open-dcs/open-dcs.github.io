@@ -25,12 +25,19 @@ This is a single document that describes the system as a whole, it can be read
 
 All of the SRS documents are provided at the pages referenced in this list:
 
-* [Core Library][libdcs-core-srs]
-* [Data Acquisition Library][libdcs-daq-srs]
-* [Networking Library][libdcs-net-srs]
-* [Data Logging Library][libdcs-log-srs]
+* [Data Acquisition Daemon][dcs-daqd-srs]
+* [Control Daemon][dcs-controld-srs]
+* [Data Logging Daemon][dcs-logd-srs]
 
 ## Design
+
+## API Reference
+
+### REST
+
+### DBus
+
+### ZeroMQ
 
 ## Testing
 
@@ -39,7 +46,6 @@ All of the SRS documents are provided at the pages referenced in this list:
 [dactl]: https://github.com/coanda/dactl
 [history]: /doc/dactl/2016/08/31/history.html
 [opendcs-srs]: /doc/requirements/opendcs-srs.html
-[libdcs-core-srs]: /doc/requirements/libdcs-core-srs.html
-[libdcs-daq-srs]: /doc/requirements/libdcs-daq-srs.html
-[libdcs-net-srs]: /doc/requirements/libdcs-net-srs.html
-[libdcs-log-srs]: /doc/requirements/libdcs-log-srs.html
+[dcs-daqd-srs]: /doc/requirements/dcs-daqd-srs.html
+[dcs-controld-srs]: /doc/requirements/dcs-controld-srs.html
+[dcs-logd-srs]: /doc/requirements/dcs-logd-srs.html
