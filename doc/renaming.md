@@ -1,4 +1,4 @@
-## Renaming of the Namespace to DCS
+## Renaming the Namespace to DCS
 
 This project was forked from _Dactl_ and has been renamed _DCS_ for a variety of
 reasons. All of the commit messages have been squashed, a copy of the history
