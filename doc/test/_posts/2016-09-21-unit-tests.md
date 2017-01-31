@@ -4,8 +4,6 @@ title:  Unit Tests in OpenDCS
 author: Geoff Johnson <geoff.jay@gmail.com>
 date:   2016-09-21 16:15:02 -0700
 description: A summary of the unit testing framework that has been added to OpenDCS.
-visible: 1
-categories: doc testing
 ---
 
 The unit test framework that is used in OpenDCS is based off of the work done by
@@ -67,3 +65,7 @@ Which at this time results in the same output as above.
 
 [gtest]: http://developer.gnome.org/glib/unstable/glib-Testing.html
 [libgee]: https://live.gnome.org/Libgee
+
+<!--
+vim: ft=liquid
+-->

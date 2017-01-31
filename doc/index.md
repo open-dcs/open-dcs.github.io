@@ -38,7 +38,7 @@ All of the SRS documents are provided at the pages referenced in this list:
 The programming reference pages have been developed using the valadoc tool which
 generates its output from the comments contained in the class files.
 
-* [v0.1](/doc/ref/dcs-0.1/)
+* [v0.1](/doc/valadoc/dcs-0.1/)
 
 ## REST API
 
