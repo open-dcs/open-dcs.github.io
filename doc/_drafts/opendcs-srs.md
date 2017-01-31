@@ -34,10 +34,60 @@ software.<br/>
 <!--break-->
 
 ## Functionality
+The system has four main functions:
+ * Data acquisition
+ * Data logging
+ * Feedback control
+ * Graphical user interface
+
+The system shall:
+ * Control the data acquisition hardware.
+ * Record the data from the data acquisition hardware.
+ * Retrieve and manage data records.
+ * Route data and messages freely between nodes of the network.
+ * Measure the process variables and generate the output signals of a control system.
+ * Provide a graphical user interface to the data and controls.
+ * Provide a REST API service for the system.
+ * Load a configuration from a file.
+
+The system should
+ * Monitor and log the system activity and status.
+
 
 ## Hardware / Software Functional Partitioning
 
+### Applications
+The system uses consists of the following applications:
+ * Data acquisition daemon
+ * Data logging daemon
+ * Control system daemon
+ * Graphical user interface daemon
+
+ Communication between applications is over [ZeroMQ](http://zeromq.org) or via
+ REST API. Multiple instances of a particular daemon are possible. These are self
+ contained applications that operate independent of the system as a whole.
+ This modular approach serves several purposes that include:
+
+ * Distribution of services to multiple locations.
+ * Distribution of CPU load and hardware requirements.
+ * Modularity, which simplifies software design, useage and maintainence.
+
+### Plugins
+
+ The applications implement a common plugin system, which further enhances the
+ modularity and flexibility of the system. An example of this would be the data
+ acquisition daemon which can have a plugin for a particular piece of DAQ
+ hardware. A new type of device is added to the system by creating and
+ installing a plugin that interacts with the application in a standardized fashion.
+
 ## Performance
+
+General performance requirements are:
+
+ * The system shal have as fast a response time.
+   * High speed data acquisition is possible.
+   * High speed control systems are possible.
+   * The GUI responds quicly to input an provides real time graphical output.
 
 ## Hardware / Software Performance Partitioning
 
