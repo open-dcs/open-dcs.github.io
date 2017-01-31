@@ -63,3 +63,7 @@ OpenDCS home page:
 More documentation with examples:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://open-dcs.github.io/doc](http://open-dcs.github.io/doc)
+
+<!--
+vim: ft=liquid
+-->

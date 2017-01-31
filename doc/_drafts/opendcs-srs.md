@@ -58,3 +58,7 @@ References:
 
 [ieee-req]: http://sunnyday.mit.edu/papers/tcas-tse.pdf
 [microtools]: http://www.microtoolsinc.com/Howsrs.php
+
+<!--
+vim: ft=liquid
+-->

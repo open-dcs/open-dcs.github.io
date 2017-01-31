@@ -4,4 +4,4 @@ A control loop plugin:
 
 *
 
-### Features
+## Features

@@ -12,4 +12,4 @@ A device plugin:
 * receives all messages seen on the message queue it is connected to
 * sends messages for alarms, measurements, status, etc. using the plugin's unique identifier as the key to the message object
 
-### Features
+## Features
