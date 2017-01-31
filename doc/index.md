@@ -9,19 +9,19 @@ documents that are required to demonstrate that you know what you're doing, even
 when you don't. This level is probably mostly for that and some of it was/will
 be done under duress so try not to judge too harshly.
 
-## History
+# History
 
 For the commit history of [Dactl][dactl] at the point that OpenDCS was forked
 see [here][history].
 
-## Requirements
+# Requirements
 
-### System Requirements Specification
+## System Requirements Specification
 
 This is a single document that describes the system as a whole, it can be read
 [here][opendcs-srs].
 
-### Software Requirements Specification
+## Software Requirements Specification
 
 All of the SRS documents are provided at the pages referenced in this list:
 
@@ -29,19 +29,26 @@ All of the SRS documents are provided at the pages referenced in this list:
 * [Control Daemon][dcs-controld-srs]
 * [Data Logging Daemon][dcs-logd-srs]
 
-## Design
+# Design
 
-## API Reference
+# Documentation
 
-### REST
+## Valadoc Reference
 
-### DBus
+The programming reference pages have been developed using the valadoc tool which
+generates its output from the comments contained in the class files.
 
-### ZeroMQ
+* [v0.1](/doc/ref/dcs-0.1/)
 
-## Testing
+## REST API
 
-## Presentation
+## DBus API
+
+## ZeroMQ API
+
+# Testing
+
+# Presentation
 
 [dactl]: https://github.com/coanda/dactl
 [history]: /doc/dactl/2016/08/31/history.html

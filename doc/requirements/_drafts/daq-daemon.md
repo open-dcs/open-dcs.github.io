@@ -50,6 +50,6 @@ The data acquisition daemon:
    "device0": { "status": "active" }
    ```
 
-[ex-sub]: daq-daemon-sub.svg
-[ex-pub]: daq-daemon-pub.svg
-[ex-rep]: daq-daemon-rep.svg
+[ex-sub]: {{ site.baseurl }}/assets/img/daq-daemon-sub.svg
+[ex-pub]: {{ site.baseurl }}/assets/img/daq-daemon-pub.svg
+[ex-rep]: {{ site.baseurl }}/assets/img/daq-daemon-rep.svg
