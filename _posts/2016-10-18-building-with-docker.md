@@ -43,3 +43,7 @@ environment that contains these in separate builds:
 * messaging proxy
 
 [docker-repo]: https://github.com/open-dcs/dcs-docker.git
+
+<!--
+vim: ft=liquid
+-->

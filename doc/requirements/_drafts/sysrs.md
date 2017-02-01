@@ -4,8 +4,6 @@ title:  System Requirements Specification for OpenDCS
 author: Geoff Johnson <geoff.jay@gmail.com>
 date:   2016-09-07 19:20:10 -0700
 description: An SRS for the OpenDCS as an entire system.
-categories: requirements
-permalink: /doc/requirements/opendcs-srs
 ---
 
 <!--

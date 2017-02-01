@@ -19,11 +19,11 @@ ensure compliance to a minimum standard.
 
 All tests will be performed using the following:
 
-  * Intel® Core™ i5-4690 CPU @ 3.50GHz × 4
-  * Memory: 7.7 GiB
-  * OS: Fedora 23
-  * OS Type: 64-bit
-  * Kernel Version: 4.7.2-101.fc23.x86\_64
+* Intel® Core™ i5-4690 CPU @ 3.50GHz × 4
+* Memory: 7.7 GiB
+* OS: Fedora 23
+* OS Type: 64-bit
+* Kernel Version: 4.7.2-101.fc23.x86_64
 
 #### Publish Test
 
@@ -42,11 +42,11 @@ value once the performance metrics have stabilized.
 
 The performance metrics are:
 
-  * **latency** - the difference in time between the time value of the first
-    generated point in a message and the time value at which the message was sent.
-  * **jitter** - the variablility of the latency.
-  * %CPU
-  * %Memory
+* **latency** - the difference in time between the time value of the first
+  generated point in a message and the time value at which the message was sent.
+* **jitter** - the variablility of the latency.
+* %CPU
+* %Memory
 
 An example command to set the publisher :
 
@@ -84,13 +84,13 @@ determined if the maximum subscribing data rate will limited by the publisher.
 
 The performance metrics are:
 
-  * **latency** - the difference between the time the message was received and
-    the time that the data was processes. This is somewhat open to
-    interperetation. The intent is to find out how much time is spent in a queue
-    or in processing.
-  * **jitter** - the variablility of the latency.
-  * %CPU
-  * %Memory
+* **latency** - the difference between the time the message was received and
+  the time that the data was processes. This is somewhat open to
+  interperetation. The intent is to find out how much time is spent in a queue
+  or in processing.
+* **jitter** - the variablility of the latency.
+* %CPU
+* %Memory
 
 An example command to set the publisher :
 
@@ -108,11 +108,11 @@ This test combines the previous two tests to evaluate the end-to-end performance
 of the publish-subscribe configuration. These three tests can all be run
 simultaneously as one inclusive test.  The performance metrics are:
 
-  * **latency** - the difference between the time a message was sent and when it was
-    received.
-  * **jitter** - the variablility of the latency.
-  * %CPU
-  * %Memory
+* **latency** - the difference between the time a message was sent and when it was
+  received.
+* **jitter** - the variablility of the latency.
+* %CPU
+* %Memory
 
 #### Request Test
 
@@ -124,11 +124,11 @@ value or as a random length generic message. The message rate for each
 configuration will be increased from a minimum value once the performance
 metrics have stabilized.  The performance metrics are:
 
-  * **latency** - the difference between the time the message is generated and
-    when it was sent.
-  * **jitter** - the variablility of the latency.
-  * %CPU
-  * %Memory
+* **latency** - the difference between the time the message is generated and
+  when it was sent.
+* **jitter** - the variablility of the latency.
+* %CPU
+* %Memory
 
 An example command to set the requester:
 
@@ -136,8 +136,10 @@ Send 5000 requests to 127.0.0.1:5588 at 1000 requests per second. The message
 length is 500 bytes. Write the status to a log file 12 times every second. Start
 transmitting data immediately.
 
-dcs-request -a 127.0.0.1 -p 5588 -t TCP -C 5000 -m 1000 -L 500 -l ./log.txt -g
-12 start
+```bash
+dcs-request -a 127.0.0.1 -p 5588 -t TCP -C 5000 \
+-m 1000 -L 500 -l ./log.txt -g 12 start
+```
 
 The log file will contain the performance metrics data. If these have not
 reached a steady state then the messaging rate will need to be increased **-n**.
@@ -155,21 +157,23 @@ value or as a random length generic message. The message rate for each
 configuration will be increased from a minimum value once the performance
 metrics have stabilized.  The performance metrics are:
 
-  * **latency**
-    * **send latency** - the difference between the time a request is generated
-      and when it was sent.
-    * **receive latency** - the difference between the time a reply was received
-      and when it was processed.
-  * **jitter** - the variablility of the latency.
-  * %CPU
-  * %Memory
+* **latency**
+  * **send latency** - the difference between the time a request is generated
+    and when it was sent.
+  * **receive latency** - the difference between the time a reply was received
+    and when it was processed.
+* **jitter** - the variablility of the latency.
+* %CPU
+* %Memory
 
 An example command to set the requester:
 
 Send 5000 replys from 127.0.0.1:5588. Write the status to a log file 12 times
 every second. Start responding to requests immediately.
 
+```bash
 dcs-reply -a 127.0.0.1 -p 5588 -t TCP -C 5000 -l ./log.txt -g 12 start
+```
 
 The log file will contain the performance metrics data. If these have not
 reached a steady state then the messaging rate will need to be increased **-n**.
@@ -183,14 +187,14 @@ This test combines the previous two tests to evaluate the end-to-end performance
 of the request-reply configuration. These three tests can all be run
 simultaneously as one larger test. The performance metrics are:
 
-  * latency
-    * **request latency** - the difference between the time a request was sent
-      and when it was received.
-    * **reply latency** - the difference betweeen the time a reply was sent and
-      and when the is was received.
-  * **jitter** - the variablility of the latency.
-  * %CPU
-  * %Memory
+* latency
+  * **request latency** - the difference between the time a request was sent
+    and when it was received.
+  * **reply latency** - the difference betweeen the time a reply was sent and
+    and when the is was received.
+* **jitter** - the variablility of the latency.
+* %CPU
+* %Memory
 
 
 #### Analysis

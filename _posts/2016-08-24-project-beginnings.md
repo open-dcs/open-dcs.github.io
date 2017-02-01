@@ -25,3 +25,7 @@ More information to come.
 
 [dactl-repo]: http://github.com/coanda/dactl
 [opendcs-repo]: http://github.com/open-dcs/dcs
+
+<!--
+vim: ft=liquid
+-->

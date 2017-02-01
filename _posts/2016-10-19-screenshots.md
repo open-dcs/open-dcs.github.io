@@ -65,3 +65,7 @@ Shows an application configuration with:
 [ex1]:{{ site.baseurl }}/assets/img/screenshots/config-example1.png
 [ex2]:{{ site.baseurl }}/assets/img/screenshots/config-example2.png
 [ex3]:{{ site.baseurl }}/assets/img/screenshots/config-example3.png
+
+<!--
+vim: ft=liquid
+-->

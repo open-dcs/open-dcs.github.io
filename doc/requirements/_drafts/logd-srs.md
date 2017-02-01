@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  Software Requirements Specification for dcs-logd
+title:  SRS for the Logging Daemon
 author: Geoff Johnson <geoff.jay@gmail.com>
 date:   2016-09-07 19:15:14 -0700
 description: An SRS for the OpenDCS data logging daemon.
-categories: requirements
-permalink: /doc/requirements/dcs-logd-srs
 ---
 
 {% comment %}

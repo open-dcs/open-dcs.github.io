@@ -52,7 +52,11 @@ generates its output from the comments contained in the class files.
 
 [dactl]: https://github.com/coanda/dactl
 [history]: /doc/dactl/2016/08/31/history.html
-[opendcs-srs]: /doc/requirements/opendcs-srs.html
-[dcs-daqd-srs]: /doc/requirements/dcs-daqd-srs.html
-[dcs-controld-srs]: /doc/requirements/dcs-controld-srs.html
-[dcs-logd-srs]: /doc/requirements/dcs-logd-srs.html
+[opendcs-srs]: /doc/requirements/2016/09/07/sysrs.html
+[dcs-daqd-srs]: /doc/requirements/2016/09/07/daqd-srs.html
+[dcs-controld-srs]: /doc/requirements/2016/09/07/controld-srs.html
+[dcs-logd-srs]: /doc/requirements/2016/09/07/logd-srs.html
+
+<!--
+vim: ft=liquid
+-->

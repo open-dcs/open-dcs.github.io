@@ -1,0 +1,29 @@
+@startuml
+
+/' OpenDCS GUI Configuration Activity
+ '
+ ' Describes the way that the GUI software compiles its data model using the
+ ' configuration files that are either provided or located in known folders.
+ '/
+
+title OpenDCS GUI Configuration Activity
+
+start
+  if (-f supplied?) then (yes)
+  elseif (~/.dcsrc\navailable?) then (yes)
+  elseif (/etc/dcs/dcs.xml\navailable?) then (yes)
+  else (no)
+    :return error;
+    end
+  endif
+  :parse\nconfiguration;
+  :get root node;
+  repeat
+    :use UI factory to build object from node;
+    :use UI manager to add object;
+    :get next configuration node;
+  repeat while (node != null?)
+  :present window;
+end
+
+@enduml

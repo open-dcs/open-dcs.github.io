@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  SRS for dcs-daqd
+title:  SRS for the DAQ Daemon
 author: Geoff Johnson <geoff.jay@gmail.com>
 date:   2016-09-07 19:38:04 -0700
 description: An SRS for the OpenDCS data acquisition daemon.
-categories: requirements
-permalink: /doc/requirements/dcs-daqd-srs
 ---
 
 {% comment %}

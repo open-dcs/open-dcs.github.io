@@ -63,3 +63,7 @@ the DAQ daemon in the future.
   </net:objects>
 </dcs>
 {% endhighlight %}
+
+<!--
+vim: ft=liquid
+-->

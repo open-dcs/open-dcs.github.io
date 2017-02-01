@@ -16,3 +16,7 @@ lcov --remove dcs.info "/usr*" -o dcs.info
 if [[ -d coverage ]]; then rm -rf coverage; fi
 genhtml -o coverage -t "dcs test coverage" --num-spaces 4 dcs.info
 ```
+
+<!--
+vim: ft=liquid
+-->

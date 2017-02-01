@@ -16,3 +16,7 @@ List all addins loaded by a user interface application.
 | **Param name** | **Description** |
 |:-|:-|
 | **search**<br/>optional | filter results<br/><br/>Value: Must be String |
+
+<!--
+vim: ft=liquid
+-->

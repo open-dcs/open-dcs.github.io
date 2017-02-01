@@ -31,3 +31,7 @@ components include data acquisition and control (dcs-daq), data logging
 (dcs-log), and an HMI (dcsg). Each of these have libpeas developed plugin
 systems for adding new hardware devices, logging backends, and custom interface
 elements.
+
+<!--
+vim: ft=liquid
+-->
