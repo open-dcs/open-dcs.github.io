@@ -22,8 +22,6 @@ sass:
 
 paginate: 10
 
-version: 1.5
-
 gems:
   - jekyll-sitemap
   - jekyll-paginate

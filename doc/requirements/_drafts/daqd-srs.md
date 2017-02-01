@@ -16,6 +16,13 @@ classes is described in this section.<br/>
 {% comment %}
 ### Purpose
 
+The purpose of this document is to give a detailed description of the
+requirements for the Data Acquisition daemon component of OpenDCS. It will
+illustrate the purpose and complete declaration for the development system. In
+addition to that it will explain the system constraints, interface, and
+interactions with other applications both internal and external to the OpenDCS
+suite of services and utilities.
+
 ### Scope
 
 ### Definitions, Acronyms, and Abbreviations
@@ -30,6 +37,12 @@ classes is described in this section.<br/>
 {% comment %}
 What is the software supposed to do?
 {% endcomment %}
+
+The data acquisition daemon (daqd) component of OpenDCS provides an interface
+between data acquisition (DAQ) hardware and other networked applications that
+have been developed to understand messages that it creates and receives. These
+devices will be developed as plugins for the daemon using the GObject plugin
+system [libpeas](https://wiki.gnome.org/Projects/Libpeas){:target="_blank"}.
 
 ## External Interface Requirements
 
