@@ -3,6 +3,35 @@ layout: page
 title: About
 ---
 
+## What
+
+It is a framework consisting of a suite of applications, libraries, and plugins
+that can be used to create a distributed data acquisition and control network.
+
+## Why
+
+* It simplifies software development because of its modular implementation.
+* It simplifies configuration of a distributed control system.
+* It simplifies customization and feature addition.
+* It enables networked functionality.
+  * It can distribute CPU load and memory requirements.
+  * Remote access for monitoring and configuration is possible.
+  * Remote location of sensors and equipment is possible.
+* It enables the use of simple embedded devices with limited functionality.
+* It enables simultaneous exchange of data between nodes (ie. You don't need to
+  worry about multitask management as much)
+
+## Who
+
+* Researchers with complex instrumentation, data acquisition and
+  control requirements working in a laboratory environment.
+* People who require industrial automation capability without the complexity,
+  and expense of commercially available software.
+* People who want to add functionality by creating their own software that can
+  be freely and easily integrated with OpenDCS.
+
+## Background
+
 OpenDCS is a project that came from a need to create data acquisition systems
 where components of the acquistion as well as the interface were configurable.
 Original projects were basic applications that loaded .ini files with linear

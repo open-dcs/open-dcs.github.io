@@ -16,18 +16,19 @@ see [here][history].
 
 # Requirements
 
-## System Requirements Specification
+## [System Requirements Specification][opendcs-sysrs]
 
-This is a single document that describes the system as a whole, it can be read
-[here][opendcs-srs].
+This is a single document that describes the system as a whole including
+proposed functionality, applications, interfaces, as well as other nonfunctional
+requirements.
 
 ## Software Requirements Specification
 
 All of the SRS documents are provided at the pages referenced in this list:
 
-* [Data Acquisition Daemon][dcs-daqd-srs]
-* [Control Daemon][dcs-controld-srs]
-* [Data Logging Daemon][dcs-logd-srs]
+* [Data Acquisition Daemon][daqd-srs]
+* [Control Daemon][controld-srs]
+* [Data Logging Daemon][logd-srs]
 
 # Design
 
@@ -52,10 +53,10 @@ generates its output from the comments contained in the class files.
 
 [dactl]: https://github.com/coanda/dactl
 [history]: /doc/dactl/2016/08/31/history.html
-[opendcs-srs]: /doc/requirements/2016/09/07/sysrs.html
-[dcs-daqd-srs]: /doc/requirements/2016/09/07/daqd-srs.html
-[dcs-controld-srs]: /doc/requirements/2016/09/07/controld-srs.html
-[dcs-logd-srs]: /doc/requirements/2016/09/07/logd-srs.html
+[opendcs-sysrs]: /doc/requirements/2016/09/07/sysrs.html
+[daqd-srs]: /doc/requirements/2016/09/07/daqd-srs.html
+[controld-srs]: /doc/requirements/2016/09/07/controld-srs.html
+[logd-srs]: /doc/requirements/2016/09/07/logd-srs.html
 
 <!--
 vim: ft=liquid
