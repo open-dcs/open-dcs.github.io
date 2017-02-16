@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 3, from LayoutIt!</title>
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://getbootstrap.com/examples/signin/signin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="http://cdn.layoutit.com/css/app.min-ca32f0280e.css" rel="stylesheet">
+    <style>
+      legend.radio {
+        font-weight: 700;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class="col-md-12">
+  			<div class="page-header">
+  				<img src="http://localhost:4000/assets/img/favicon.png" alt="UIR-0005-1">
+  				<h1>
+  					OpenDCS: <small>Data Acquisition Daemon Configuration</small>
+  				</h1>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h3>
+  						ZeroMQ
+  					</h3>
+  					<form role="form">
+  						<div class="form-group">
+  							<label for="zmqAddress">
+  								Address
+  							</label>
+  							<input type="text" class="form-control" id="zmqAddress">
+  						</div>
+  						<div class="form-group">
+  							<label for="zmqReqRepPort">
+  								Publisher: Port
+  							</label>
+  							<input type="text" class="form-control" id="zmqReqRepPort">
+  						</div>
+              <fieldset class="form-group">
+                <legend class="radio">Publisher: Transport</legend>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    INPROC
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                    IPC
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                    TCP
+                  </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                    PGM
+                  </label>
+                </div>
+              </fieldset>
+  						<div class="view">
+  							<p contenteditable="true">
+  								<small><b>NOTE:</b> The options given here are for the <b>publishing</b> socket only but may also need to include <b>subscribe, request</b> and<b> reply</b></small>.
+  							</p>
+  						</div>
+  						<button type="submit" class="btn btn-default">
+  							Apply
+  						</button>
+  					</form>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h3>
+  						REST
+  					</h3>
+  					<form role="form">
+  						<div class="form-group">
+  							<label for="RESTAddress">
+  								Address
+  							</label>
+  							<input type="text" class="form-control" id="RESTAddress">
+  						</div>
+  						<div class="form-group">
+  							<label for="RESTPort">
+  								Port
+  							</label>
+  							<input type="text" class="form-control" id="RESTPort">
+  						</div>
+  						<button type="submit" class="btn btn-default">
+  							Apply
+  						</button>
+  					</form>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h3>
+  						Devices
+  					</h3>
+            <div class="view">
+  	        <table class="table table-hover" contenteditable="true">
+                <thead>
+                  <tr>
+                    <th>Device #</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="active">
+                    <td>1</td>
+                    <td>Advantek PCI-1710</td>
+                    <td>OK</td>
+                    <td><a href="">Edit</a></td>
+                  </tr>
+                  <tr class="active">
+                    <td>2</td>
+                    <td>Advantek PCI-1713</td>
+                    <td>OK</td>
+                    <td><a href="">Edit</a></td>
+                  </tr>
+                  <tr class="warning">
+                    <td>3</td>
+                    <td>Advantek PCI-1723</td>
+                    <td>Not Connected</td>
+                    <td><a href="">Edit</a></td>
+                  </tr>
+                  <tr class="active">
+                    <td>4</td>
+                    <td>Siwarex WP231</td>
+                    <td>OK</td>
+                    <td><a href="">Edit</a></td>
+                  </tr>
+                  <tr class="danger">
+                    <td>5</td>
+                    <td>Coanda Conductivity</td>
+                    <td>Alarm</td>
+                    <td><a href="">Edit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+  	        </div>
+  		    </div>
+  	    </div>
+  		</div>
+  	</div>
+  </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

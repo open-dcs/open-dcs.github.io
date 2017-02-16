@@ -86,7 +86,12 @@ are given.
 | RAT: |  A user must be registered to login to systems that have restricted access. |
 | DEP: | FR-0001 |
 
-{% comment %}see - https://getbootstrap.com/examples/signin/{% endcomment %}
+|---
+| ![UIR-0002-1](/assets/img/requirements/UIR-0002-1.png "Figure UIR-0002-1")
+|---
+| *Figure UIR-002-1*
+
+{% comment %} source code for this is in assets/html/requirements {% endcomment %}
 
 ---
 
@@ -133,15 +138,20 @@ This is a general requirement for setting anything from the HMI
 
 ---
 
-| ID: | __UIR-000#__ |
+| ID: | __UIR-0006__ |
 | TAG: | Configure daemon settings |
 | DESC: | A user of any daemon service can configure the different settings that it has available using a common layout presented as a web page using bootstrap, and is hosted by that daemon. |
 | RAT: | It should be possible to view and change all settings for any daemon service from a web page. |
 | DEP: | UIR-0001
 
+|---
+| ![UIR-0006-1](/assets/img/requirements/UIR-0006.png "Figure UIR-0006")
+|---
+| *Figure UIR-0006-1*
+
 ---
 
-| ID: | __UIR-0006__ |
+| ID: | __UIR-0007__ |
 | TAG: | Configure network settings |
 | DESC: | A user of the HMI shall be able to display and configure the network. |
 | RAT: | To see which system components are connected and how they are configured |
@@ -149,31 +159,46 @@ This is a general requirement for setting anything from the HMI
 
 ---
 
-| ID: | __UIR-0007__ |
+| ID: | __UIR-0008__ |
 | TAG: | Configure logging daemon settings |
 | DESC: | A user of the HMI shall be able to display and configure data logging daemon settings using the web page it provides by drawing it in a WebKit widget, see Figure #. |
 | RAT: | It should be possible to view and change the parameters affecting the logging daemon. |
 | DEP: | UIR-0001, UIR-0006 |
 
+|---
+| ![UIR-0008-1](/assets/img/requirements/UIR-0008.png "Figure UIR-0008-1")
+|---
+| *Figure UIR-0008-1*
+
 ---
 
-| ID: | __UIR-0008__ |
+| ID: | __UIR-0009__ |
 | TAG: | Configure data acquisition daemon settings |
 | DESC: | A user of the HMI shall be able to display and configure data aquisition daemon settings using the web page it provides by drawing it in a WebKit widget, see Figure #. |
 | RAT: | It should be possible to view and change the parameters affecting the data acquissition daemon. |
 | DEP: | UIR-0001, UIR-0006 |
 
+|---
+| ![UIR-0009-1](/assets/img/requirements/UIR-0009.png "Figure UIR-0009-1")
+|---
+| *Figure UIR-0009-1*
+
 ---
 
-| ID: | __UIR-0009__ |
+| ID: | __UIR-0010__ |
 | TAG: | Configure feedback control daemon settings |
 | DESC: | A user of the HMI shall be able to display and configure feedback control daemon settings using the web page it provides by drawing it in a WebKit widget, see Figure #. |
 | RAT: | It should be possible to view and change the parameters affecting the feedback control daemon. |
 | DEP: | UIR-0001, UIR-0006 |
 
+|---
+| ![UIR-0010](/assets/img/requirements/UIR-0010.png "Figure UIR-0010")
+|---
+| *Figure UIR-0010*
+
 ---
 
-| ID: | __UIR-0010__ |
+| ID: | __UIR-0011__ |
 | TAG: | Configure HMI layout
 | DESC: | A user of the HMI should be able to display and configure the flexible layout configuration for itself, see Figure #. |
 | RAT: | It should be possible to view and change the parameters affecting the feedback control daemon. |
@@ -181,11 +206,11 @@ This is a general requirement for setting anything from the HMI
 
 ---
 
-| ID: | __UIR-0011__ |
+| ID: | __UIR-0012__ |
 | TAG: | Configure HMI plugin
 | DESC: | A user of the HMI should be able to display and configure HMI addin plugin settings, see Figure #. |
 | RAT: | It should be possible to view and change what and how information is displayed. |
-| DEP: | UIR-0001, UIR-0010
+| DEP: | UIR-0001, UIR-0011
 
 ---
 
@@ -195,27 +220,42 @@ the web page provided by the plugin and is accessed through the daemon web/rest
 server that does the settings for itself
 {% endcomment %}
 
-| ID: | __UIR-0012__ |
-| TAG: | Configure device plugin
-| DESC: | A user of the HMI should be able to display and configure the device plugins loaded by any data acquisition daemons that it is connected to, see Figure #. |
-| RAT: | It should be possible to view and change parameters that affect devices |
-| DEP: | UIR-0001, UIR-0008 |
-
----
-
 | ID: | __UIR-0013__ |
-| TAG: | Configure logging back end plugin
-| DESC: | A user of the HMI should be able to display and configure the backend plugins loaded by any data logging daemons that it is connected to, see Figure #.
-| RAT: | It should be possible to what and how data is stored and retrieved. |
-| DEP: | UIR-0001, UIR-0007 |
+| TAG: | Configure device plugin
+| DESC: | A user of the HMI should be able to display and configure devices. The HMI will access the plugin's configuration web page through a web server on the DAQ daemon , see Figure #. |
+| RAT: | It should be possible to view and change parameters that affect devices |
+| DEP: | UIR-0001, UIR-0009 |
+
+|---
+| ![UIR-0013](/assets/img/requirements/UIR-0013.png "Figure UIR-0013")
+|---
+| *Figure UIR-0013*
 
 ---
 
 | ID: | __UIR-0014__ |
+| TAG: | Configure logging back end plugin
+| DESC: | A user of the HMI should be able to display and configure the logging back end. The HMI will access the plugin's configuration web page through a web server on the logging daemon , see Figure #. |
+| RAT: | It should be possible to configure what and how data is stored and retrieved. |
+| DEP: | UIR-0001, UIR-0008 |
+
+|---
+| ![UIR-0014](/assets/img/requirements/UIR-0014.png "Figure UIR-0014")
+|---
+| *Figure UIR-0014*
+
+---
+
+| ID: | __UIR-0015__ |
 | TAG: | Configure feedback controller plugin |
-| DESC: | A user of the HMI should be able to display and configure the controller plugins loaded by any feedback control daemons that it is connected to, see Figure #. |
+| DESC: | A user of the HMI should be able to display and configure feedback controllers. The HMI will access the controller plugin's configuration web page through a web server on the feedback controller daemon , see Figure #. |
 | RAT: | It should be possible to display and configure the parameter that affect feedback control,  |
-| DEP: | UIR-0001, UIR-0009 |
+| DEP: | UIR-0001, UIR-0010 |
+
+|---
+| ![UIR-0015](/assets/img/requirements/UIR-0015.png "Figure UIR-0015")
+|---
+| *Figure UIR-0015*
 
 #### Hardware Interfaces
 
@@ -243,8 +283,7 @@ server that does the settings for itself
 | ID: | __HWIR-0004__ |
 | TAG: | Processor speed |
 | DESC: | The system components shall each have a 400 MHz or faster processor. |
-| RAT: | The software requires a reasonably fast processor to handle the data and
-run a user interface. |
+| RAT: | The software requires a reasonably fast processor to handle the data and run a user interface. |
 
 ---
 
@@ -264,9 +303,9 @@ run a user interface. |
 #### Communications Interfaces
 
 | ID: | __CIR-0001__ |
-| TAG: | Internet Protocol |
-| DESC: | The system shall use TCP/IP v4 |
-| RAT: | |
+| TAG: | ZeroMQ |
+| DESC: | The system shall use ZeroMQ for publishing and subscribing making requests and replying to them |
+| RAT: | ZeroMQ has many performance and usability advantages that make it idealfor this application see [ZeroMQ website](http://zeromq.org)
 | DEP: | |
 
 ### Functional Requirements

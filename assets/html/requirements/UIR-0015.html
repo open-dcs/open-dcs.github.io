@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 3, from LayoutIt!</title>
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://getbootstrap.com/examples/signin/signin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="http://cdn.layoutit.com/css/app.min-ca32f0280e.css" rel="stylesheet">
+    <style>
+      legend.radio {
+        font-weight: 700;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class="col-md-12">
+  			<div class="page-header">
+  				<h1>
+  					<img src="http://localhost:4000/assets/img/favicon.png" alt="UIR-0005-1">
+  					OpenDCS: <small>PID Controller Configuration</small>
+  				</h1>
+  			</div>
+
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h3>
+  						General
+  					</h3>
+  					<form role="form">
+  						<div class="form-group">
+  							<label for="controlId">
+  								Controller ID: PID_00
+  							</label>
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h3>
+  						Input
+  					</h3>
+  					<form role="form">
+  						<div class="form-group">
+  							<label for="daemonIn">
+  								DAQ Daemon
+  							</label>
+  							<input type="text" class="form-control" id="daemonIn">
+  							<label for="deviceIn">
+  								Device ID
+  							</label>
+  							<input type="text" class="form-control" id="deviceIn">
+  							<label for="channelIn">
+  								Channel ID
+  							</label>
+  							<input type="text" class="form-control" id="channelIn">
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h3>
+  						Output
+  					</h3>
+  					<form role="form">
+  						<div class="form-group">
+  							<label for="daemonOut">
+  								DAQ Daemon
+  							</label>
+  							<input type="text" class="form-control" id="daemonOut">
+  							<label for="deviceOut">
+  								Device ID
+  							</label>
+  							<input type="text" class="form-control" id="deviceOut">
+  							<label for="channelOut">
+  								Channel ID
+  							</label>
+  							<input type="text" class="form-control" id="channelOut">
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h3>
+  						PID Parameters
+  					</h3>
+  					<form role="form">
+  						<div class="form-group">
+  							<label for="kp">
+  								Kp
+  							</label>
+  							<input type="text" class="form-control" id="kp">
+  							<label for="ki">
+  								Ki
+  							</label>
+  							<input type="text" class="form-control" id="ki">
+  							<label for="kd">
+  								Kd
+  							</label>
+  							<input type="text" class="form-control" id="kd">
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
