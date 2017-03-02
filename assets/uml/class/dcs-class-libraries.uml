@@ -1,4 +1,3 @@
-
 @startuml
 
 /' OpenDCS UML
@@ -27,14 +26,9 @@
 
 title OpenDCS UML
 
-left to right direction
-
-page 2x2
 
 package "Dcs" #DDDDDD {
-
-    top to bottom direction
-
+left to right direction
     '
     'Enumerations
     '
@@ -228,11 +222,18 @@ package "Dcs" #DDDDDD {
         class Control.Factory {
         }
 
+        class LoopManager {
+        }
+
+        class LoopProxy {
+        }
+
         '
         ' Associations
         '
 
         Control.Factory ..|> Factory
+        LoopManager --|> PluginManager
 
         '
         ' Notes
@@ -300,11 +301,15 @@ package "Dcs" #DDDDDD {
         class Log.BackendProxy {
         }
 
+        class Log.BackendManager {
+        }
+
         '
         ' Associations
         '
 
         Log.Factory ..|> Factory
+        Log.BackendManager --|> PluginManager
 
         '
         ' Notes
@@ -343,7 +348,7 @@ package "Dcs" #DDDDDD {
         '
 
         Net.Factory ..|> Factory
-        RestService --|> Soup.Server
+        RestService --|> Soup.Server #blue
 
         '
         ' Notes
