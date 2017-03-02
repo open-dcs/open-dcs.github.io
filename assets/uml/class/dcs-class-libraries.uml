@@ -1,0 +1,355 @@
+
+@startuml
+
+/' OpenDCS UML
+ '
+ ' Language: Vala
+ '
+ ' Because Vala uses public properties and can generate getters and setters
+ ' using syntactic sugar any public property will be assumed to have an
+ ' associated get/set. Other property cases will be documented.
+ '
+ ' If a class contains only properties and methods the separators will not be
+ ' modified allowing plantuml to put each where they belong. In the case that
+ ' the class contains signals and/or getters and setters it will use:
+ '
+ ' class Foo {
+ '     int foo_prop
+ '     -- signals --
+ '     void foo_signal ()
+ '     ---- ' force a blank line
+ '     void foo_method ()
+ '     .. get/set ..
+ '     int get_foo_prop ()
+ '     void set_foo_prop (int foo)
+ ' }
+ '/
+
+title OpenDCS UML
+
+left to right direction
+
+page 2x2
+
+package "Dcs" #DDDDDD {
+
+    top to bottom direction
+
+    '
+    'Enumerations
+    '
+
+    '
+    ' Interfaces
+    '
+    '
+    interface Application {
+    }
+
+    interface Factory {
+    }
+
+    interface Config {
+    }
+
+    interface Object {
+    }
+
+    interface Serializable {
+    }
+
+    interface Buildable {
+    }
+
+    interface CldAdapter {
+    }
+
+    interface Config {
+    }
+
+    interface Container {
+    }
+
+    interface DBusInterface {
+    }
+
+    interface Factory {
+    }
+
+    interface Extension {
+    }
+
+    interface View {
+    }
+
+    '
+    ' Classes
+    '
+
+    class ApplicationConfig {
+    }
+
+    class ApplicationFactory {
+    }
+
+    class BaseConfig {
+    }
+
+    class BaseObject {
+    }
+
+    abstract class Controller {
+    }
+
+    class DataSeries {
+    }
+
+    class SysLog {
+    }
+
+    class Message {
+    }
+
+    class MetaConfig {
+    }
+
+    class Model {
+    }
+
+    abstract class ModuleLoader {
+    }
+
+    class PluginInformation {
+    }
+
+    class PluginLoader {
+    }
+
+    class PluginExtension {
+    }
+
+    abstract class PluginManager {
+    }
+
+    class LegacyPlugin {
+    }
+
+    class Point {
+    }
+
+    class Serializable {
+    }
+
+    '
+    ' Associations
+    '
+
+    /'ApplicationConfig --|> GLib.Object'/
+    /'ApplicationFactory --|> GLib.Object'/
+    /'Application --|> GLib.Object'/
+    /'BaseConfig --|> GLib.Object'/
+    /'BaseObject --|> GLib.Object'/
+    /'Controller --|> GLib.Object'/
+    /'SysLog --|> GLib.Object'/
+    /'Message --|> GLib.Object'/
+    /'MetaConfig --|> GLib.Object'/
+    /'Model --|> GLib.Object'/
+    /'ModuleLoader --|> GLib.Object'/
+    /'PluginInformation --|> GLib.Object'/
+    ApplicationFactory ..|> Factory
+    BaseConfig ..|> Config
+    BaseObject ..|> Object
+    DataSeries --|> BaseObject
+    DataSeries ..|> Buildable
+    DataSeries ..|> CldAdapter
+    MetaConfig ..|> Config
+    Model ..|> Container
+    PluginLoader --|> ModuleLoader
+    PluginExtension --|> PeasExtensionBase
+    PluginExtension --|> PeasActivatable
+    PluginExtension ..|> Extension
+
+
+    '
+    ' Notes
+    '
+    '
+
+    package "CLI" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        '
+        ' Classes
+        '
+
+        class CLI.Application {
+        }
+
+        class CLI.Factory {
+        }
+
+        '
+        ' Associations
+        '
+        CLI.Application ..|> Application
+        CLI.Application --|> GLib.Application
+        CLI.Factory ..|> Factory
+
+
+        '
+        ' Notes
+        '
+    }
+
+    package "Control" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        interface Control.Loop {
+        }
+
+        '
+        ' Classes
+        '
+
+        class Control.Factory {
+        }
+
+        '
+        ' Associations
+        '
+
+        Control.Factory ..|> Factory
+
+        '
+        ' Notes
+        '
+    }
+
+    package "DAQ" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        interface Channel {
+        }
+
+        '
+        ' Classes
+        '
+
+        class DAQ.Factory {
+        }
+
+        class DAQ.DeviceManager {
+        }
+
+        class DAQ.Device {
+        }
+
+        '
+        ' Associations
+        '
+
+        DAQ.Factory ..|> Factory
+        DAQ.DeviceManager --|> PluginManager
+
+        '
+        ' Notes
+        '
+    }
+
+    package "Log" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        interface Log.Backend {
+        }
+
+        '
+        ' Classes
+        '
+
+        class Log.Factory {
+        }
+
+        class Log.BackendProxy {
+        }
+
+        '
+        ' Associations
+        '
+
+        Log.Factory ..|> Factory
+
+        '
+        ' Notes
+        '
+    }
+
+    package "Net" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+
+        '
+        ' Classes
+        '
+
+        class Net.Factory {
+        }
+
+        abstract class RestService {
+        }
+
+        abstract class ZmqClient {
+        }
+
+        abstract class ZmqService {
+        }
+
+        '
+        ' Associations
+        '
+
+        Net.Factory ..|> Factory
+        RestService --|> Soup.Server
+
+        '
+        ' Notes
+        '
+
+
+    }
+}
+@enduml
