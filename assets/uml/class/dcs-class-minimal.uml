@@ -1,0 +1,390 @@
+@startuml
+
+/' OpenDCS UML
+ '
+ ' Language: Vala
+ '
+ ' Because Vala uses public properties and can generate getters and setters
+ ' using syntactic sugar any public property will be assumed to have an
+ ' associated get/set. Other property cases will be documented.
+ '
+ ' If a class contains only properties and methods the separators will not be
+ ' modified allowing plantuml to put each where they belong. In the case that
+ ' the class contains signals and/or getters and setters it will use:
+ '
+ ' class Foo {
+ '     int foo_prop
+ '     -- signals --
+ '     void foo_signal ()
+ '     ---- ' force a blank line
+ '     void foo_method ()
+ '     .. get/set ..
+ '     int get_foo_prop ()
+ '     void set_foo_prop (int foo)
+ ' }
+ '/
+
+title OpenDCS UML
+
+left to right direction
+
+page 2x2
+
+package "Dcs" #DDDDDD {
+
+    top to bottom direction
+
+    'Enumerations
+
+    enum FactoryError {
+    }
+
+    enum LogLevel {
+    }
+
+    enum MessageType {
+    }
+
+    '
+    ' Interfaces
+    '
+
+    interface Object {
+    }
+
+
+    interface Buildable {
+    }
+
+    interface CldAdapter {
+    }
+
+    interface Container {
+    }
+
+    interface ReferenceContainer {
+    }
+
+    interface Serializable {
+    }
+
+    interface Factory {
+    }
+
+
+    ' TODO Needs to be written still
+    ' XXX What is a view supposed to do in an MVC?
+    'interface View {
+    '    #Dcs.Model model
+    '    #void connect (Dcs.ModelUpdateFunc model_func)
+    '}
+
+    '
+    ' Classes
+    '
+
+    abstract class AbstractObject {
+    }
+
+    abstract class AbstractContainer {
+    }
+
+    abstract class Controller {
+    }
+
+
+    class DataSeries {
+    }
+
+    class DBusInterface {
+    }
+
+    class Message {
+    }
+
+    class Model {
+    }
+
+    class Point <<compact>> {
+    }
+
+    class SysLog {
+    }
+    '/
+
+    /'
+     'box Delegates {
+     '    +void ModelUpdateFunc ()
+     '}
+     '/
+
+    '
+    ' Associations
+    '
+
+    Object --|> GLib.Object
+    Buildable --|> GLib.Object
+    Container --|> GLib.Object
+    ReferenceContainer --|> GLib.Object
+    Serializable --|> GLib.Object
+    CldAdapter --|> GLib.Object
+    Factory --|> GLib.Object
+    AbstractObject ..|> Object
+    AbstractObject ..|> Buildable
+    AbstractObject --|> AbstractContainer
+    AbstractObject ..|> ReferenceContainer
+    AbstractObject ..|> Serializable
+    AbstractContainer ..|> Container
+    DataSeries ..|> CldAdapter
+    DataSeries --|> AbstractObject
+
+    /'
+    Controller --|> GLib.Object
+    DataSeries --|> GLib.Object
+    DataSeries ..|> Object
+    DataSeries ..|> Buildable
+    DBusInterface --|> GLib.Object
+    Message --|> GLib.Object
+    Model --|> GLib.Object
+    Model ..|> Container
+    Point --|> GLib.Object
+    SysLog --|> GLib.Object
+    View --|> GLib.Object
+    '/
+
+    '
+    ' Notes
+    '
+
+/'
+ '    legend right
+ '        OpenDCS is built using the Vala language which can use special syntax
+ '        to define property getters and setters with scope that's different from
+ '        the property itself. For instance:
+ '            <i>public int value { get; private set; }</i>
+ '        which will result in a public getter and a private setter. UML has no
+ '        way of displaying this if so it should be implied that any property that
+ '        is marked public (+) will also have a public get/set, and if a property
+ '        should specify scope it will be marked as internal (~).
+ '    end legend
+ '
+ '    note top of SysLog: Bad name, planning on changing
+ '
+ '    note top of Message
+ '        This should probably be a compact class.
+ '        Other namespaces will contain message classes
+ '        as well that are more specific to the scope.
+ '    end note
+ '/
+
+    package "UI" {
+
+        '
+        ' Enumerations
+        '
+
+/'
+ '        enum Orientation {
+ '        }
+ '
+ '        enum PositionType {
+ '        }
+ '
+ '        enum PolarAxisType {
+ '        }
+ '
+ '        enum ColorGradientType {
+ '            RGB,
+ '            HSV
+ '        }
+ '/
+
+        '
+        ' Interfaces
+        '
+
+        interface Widget {
+        }
+
+        '
+        ' Classes
+        '
+
+        abstract class Canvas {
+        }
+
+        abstract class SimpleWidget {
+        }
+
+        abstract class CustomWidget {
+        }
+
+        abstract class CompositeWidget {
+        }
+
+        '
+        ' Associations
+        '
+
+        Widget --|> GLib.Object
+        Canvas -left-|> Gtk.DrawingArea
+        Canvas ..|> Object
+        SimpleWidget -left-|> Gtk.Box
+        SimpleWidget ..|> Widget
+        SimpleWidget ..|> Buildable
+        SimpleWidget ..|> Object
+        CustomWidget -left-|> Gtk.DrawingArea
+        CustomWidget ..|> Widget
+        CustomWidget ..|> Buildable
+        CustomWidget ..|> Object
+        CompositeWidget -left-|> Gtk.Box
+        CompositeWidget ..|> Widget
+        CompositeWidget ..|> Container
+        CompositeWidget ..|> Buildable
+        CompositeWidget ..|> Object
+
+        '
+        ' Notes
+        '
+
+        /'
+         'note top of CompositeWidget
+         '    This is just a simple widget that implements Container.
+         '    Could probably just simplify it down to
+         '    "Dcs.UI.CompositeWidget : Dcs.UI.SimpleWidget, Dcs.Container"
+         'end note
+         '/
+    }
+
+    package "CLI" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        '
+        ' Associations
+        '
+
+        '
+        ' Notes
+        '
+    }
+
+    package "Control" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        '
+        ' Classes
+        '
+
+        class Control.Factory {
+
+        }
+
+        '
+        ' Associations
+        '
+        Control.Factory <|.. Factory
+
+        '
+        ' Notes
+        '
+    }
+
+    package "DAQ" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        interface AChannel {
+
+        }
+
+        interface IChannel {
+
+        }
+
+        '
+        ' Classes
+        '
+
+        class AIChannel {
+
+        }
+
+        class DAQ.Factory {
+
+        }
+
+        '
+        ' Associations
+        '
+
+        AIChannel --|> AbstractObject
+        AChannel ..|> AIChannel
+        IChannel ..|> AIChannel
+        DAQ.Factory ..|> Factory
+
+        '
+        ' Notes
+        '
+    }
+    /'
+    package "Log" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        '
+        ' Associations
+        '
+
+        '
+        ' Notes
+        '
+    }
+
+    package "Net" {
+
+        '
+        ' Enumerations
+        '
+
+        '
+        ' Interfaces
+        '
+
+        '
+        ' Associations
+        '
+
+        '
+        ' Notes
+        '
+    }
+    '/
+}
+
+@enduml
