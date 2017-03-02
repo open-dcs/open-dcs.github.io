@@ -160,7 +160,6 @@ package "Dcs" #DDDDDD {
         +void stop_device_output ()
     }
 
-
     class DataSeries {
         +string ch_ref
         +Cld.Channel channel
